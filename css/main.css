@@ -1,0 +1,152 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1e1f29;
+  background-image: url("../images/pattern-hills.svg"), url("../images/bg-stars.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  font-family: 'Red Hat Text', sans-serif;
+  text-transform: uppercase;
+}
+
+body h1, body p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 9% 0 6.75%;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+main .flipTimer {
+  margin: 0 auto;
+  width: 700px;
+  color: #fb6087;
+  display: -ms-grid;
+  display: grid;
+  line-height: 150px;
+  text-align: center;
+}
+
+main .flipTimer div {
+  max-height: 175px;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+main .flipTimer p {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  color: #8486a9;
+  font-size: 14px;
+  letter-spacing: 0.3rem;
+  line-height: 0;
+  text-align: center;
+}
+
+main .flipTimer div.days, main .flipTimer p.days {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+main .flipTimer div.hours, main .flipTimer p.hours {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+main .flipTimer div.minutes, main .flipTimer p.minutes {
+  -ms-grid-column: 3;
+  grid-column: 3;
+}
+
+main .flipTimer div.seconds, main .flipTimer p.seconds {
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+
+main .flipTimer .digit-set {
+  height: 147px;
+  width: 147px;
+  font-size: 65px;
+}
+
+main .flipTimer .digit-set .digit .digit-top, main .flipTimer .digit-set .digit .shadow-top {
+  width: 147px;
+  background-color: #2c2c44;
+  border-bottom: 1px solid #2c2c44;
+}
+
+main .flipTimer .digit-set .digit .digit-bottom, main .flipTimer .digit-set .digit .shadow-bottom {
+  width: 127px;
+  background-color: #343650;
+}
+
+main .flipTimer .digit-set .digit .digit-bottom .digit-wrap, main .flipTimer .digit-set .digit .shadow-bottom .digit-wrap {
+  margin-top: -73px;
+}
+
+main .flipTimer .digit-set .digit .digit-top:before, main .flipTimer .digit-set .digit .digit-bottom:before {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .flipTimer .digit-set .digit .shadow-top {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2c2c44), to(transparent));
+}
+
+main .flipTimer .digit-set .digit .shadow-bottom {
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#343650));
+}
+
+main .social-media {
+  margin-top: 16.5%;
+  text-align: center;
+}
+
+main .social-media a {
+  color: #8486a9;
+  margin: 0 0.75rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+main .social-media a:hover {
+  color: #fb6087;
+}
+
+@media only screen and (max-width: 768px) {
+  main .flipTimer {
+    width: 325px;
+    line-height: 65px;
+  }
+  main .flipTimer div {
+    max-height: 100px;
+  }
+  main .flipTimer p {
+    font-size: 10px;
+    letter-spacing: 0.1rem;
+  }
+  main .flipTimer .digit-set {
+    height: 65px;
+    width: 65px;
+    font-size: 28px;
+  }
+  main .flipTimer .digit-set .digit .digit-top, main .flipTimer .digit-set .digit .shadow-top {
+    width: 65px;
+  }
+  main .flipTimer .digit-set .digit .digit-bottom, main .flipTimer .digit-set .digit .shadow-bottom {
+    width: 44px;
+  }
+  main .flipTimer .digit-set .digit .digit-bottom .digit-wrap, main .flipTimer .digit-set .digit .shadow-bottom .digit-wrap {
+    margin-top: -32px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

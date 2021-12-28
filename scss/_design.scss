@@ -1,0 +1,140 @@
+header {
+    padding: 9% 0 6.75%;
+
+    h1 {
+        color: $word-color-1;
+        font-size: 1.25rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+    }
+}
+
+main {
+    .flipTimer {
+        margin: 0 auto;
+        width: 700px;
+        color: $word-color-3;
+        display: grid;
+        line-height: 150px;
+        text-align: center;
+
+        div {
+            max-height: 175px;
+            grid-row: 1;
+        }
+
+        p {
+            grid-row: 2;
+            color: $word-color-2;
+            font-size: 14px;
+            letter-spacing: 0.3rem;
+            line-height: 0;
+            text-align: center;
+        }
+
+        div.days, p.days {
+            grid-column: 1;
+        }
+        
+        div.hours, p.hours {
+            grid-column: 2;
+        }
+        
+        div.minutes, p.minutes {
+            grid-column: 3;
+        }
+        
+        div.seconds, p.seconds {
+            grid-column: 4;
+        }
+
+        .digit-set {
+            height: 147px;
+            width: 147px;
+            font-size: 65px;
+
+            .digit {
+                .digit-top, .shadow-top {
+                    width: 147px;
+                    background-color: $timer-top-background;
+                    border-bottom: 1px solid $timer-top-background;
+                }
+    
+                .digit-bottom, .shadow-bottom {
+                    width: 127px;
+                    background-color: $timer-bottom-background;
+
+                    .digit-wrap {
+                        margin-top: -73px;
+                    }
+                }
+
+                .digit-top:before, .digit-bottom:before {
+                    box-shadow: none;
+                }
+    
+                .shadow-top {
+                    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($timer-top-background), to(transparent));
+                }
+    
+                .shadow-bottom {
+                    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to($timer-bottom-background));
+                }
+            }
+        }
+    }
+
+    .social-media {
+        margin-top: 16.5%;
+        text-align: center;
+
+        a {
+            color: $icon;
+            margin: 0 0.75rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $word-color-3;
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    main {
+        .flipTimer {
+            width: 325px;
+            line-height: 65px;
+
+            div {
+                max-height: 100px;
+            }
+
+            p {
+                font-size: 10px;
+                letter-spacing: 0.1rem;
+            }
+
+            .digit-set {
+                height: 65px;
+                width: 65px;
+                font-size: 28px;
+
+                .digit {
+                    .digit-top, .shadow-top {
+                        width: 65px;
+                    }
+
+                    .digit-bottom, .shadow-bottom {
+                        width: 44px;
+
+                        .digit-wrap {
+                            margin-top: -32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
